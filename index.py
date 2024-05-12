@@ -7,9 +7,9 @@ app = Flask(__name__)#verfiica que está en el archivo main
 def principal():
     return render_template('index.html')
 
-@app.route('/contacto')
-def principal_contacto():
-    return render_template('contacto.html')
+@app.route('/form_popup')
+def principal_form_popup():
+    return render_template('formulario_consulta_pop_up.html')
 
 @app.errorhandler(404)
 def pagina_no_encontrada(error):
