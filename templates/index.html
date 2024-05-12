@@ -1,8 +1,13 @@
+<head>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
 {% extends './base.html' %}
 
 {% block title %} Index {% endblock %}
 
 {% block body %}
+<!-- Navegador-->
 <nav class="navbar navbar-expand-lg navbar-light bg-info">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">NOTARIA TUCCIO</a>
@@ -33,7 +38,7 @@
         </ul>
       </div>
     </div>
-  </nav>
+</nav>
   <div class="container">
     <div class="row">
         <div class="col">
@@ -47,6 +52,81 @@
         <div class="col">
             <!-- Imagen -->
             <img src="/imagenes/inicio.jpeg" class="img-fluid" alt="Mi Imagen">
+        </div>
+    </div>
+</div>
+
+<!-- Estoy bsucando-->
+<div class="container"> 
+    <div class="row justify-content-between align-items-center">
+        <div class="col-md-8">
+            <div class="alert alert-primary" role="alert">
+                ESTOY BUSCANDO
+            </div>
+        </div>
+    
+        <div class="col-md-6">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Buscar servicios
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Servicio 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Servicio 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Servicio 3</a></li>
+                                    <!-- Agrega más servicios según sea necesario -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+        <div class="col-md-4">
+            <button type="button" class="btn btn-primary">Buscar <i class="bi bi-search"></i></button>
+        </div>
+    </div>    
+</div>
+
+<!-- Puntos de interes-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 mb-3">
+            <a href="https://www.sunat.gob.pe/" class="btn btn-outline-primary btn-lg btn-block">Sunat</a>
+        </div>
+        <div class="col-md-3 mb-3">
+            <a href="https://www.sat.gob.pe/Websitev9" class="btn btn-outline-primary btn-lg btn-block">SAT</a>
+        </div>
+        <div class="col-md-3 mb-3">
+            <a href="pagina3.html" class="btn btn-outline-primary btn-lg btn-block">Botón 3</a>
+        </div>
+        <div class="col-md-3 mb-3">
+            <a href="pagina4.html" class="btn btn-outline-primary btn-lg btn-block">Botón 4</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 mb-3">
+            <a href="pagina5.html" class="btn btn-outline-primary btn-lg btn-block">Botón 5</a>
+        </div>
+        <div class="col-md-3 mb-3">
+            <a href="pagina6.html" class="btn btn-outline-primary btn-lg btn-block">Botón 6</a>
+        </div>
+        <div class="col-md-3 mb-3">
+            <a href="pagina7.html" class="btn btn-outline-primary btn-lg btn-block">Botón 7</a>
+        </div>
+        <div class="col-md-3 mb-3">
+            <a href="pagina8.html" class="btn btn-outline-primary btn-lg btn-block">Botón 8</a>
         </div>
     </div>
 </div>
@@ -78,7 +158,8 @@
         </div>
     </div>
 </div>
-  <!-- Preguntas frecuentes-->
+
+<!-- Preguntas frecuentes-->
   <div class="container">
     <h1 class="text-center">PREGUNTAS FRECUENTES SOBRE TUCCIO</h1>
 
