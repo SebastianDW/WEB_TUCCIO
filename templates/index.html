@@ -56,7 +56,129 @@
     </div>
 </div>
 
-<!-- Estoy bsucando-->
+<!-- Nuestro servicios-->
+
+<div class="container">
+    <h2 class="text-center">NUESTROS SERVICIOS</h2>
+    <!-- Pestañas de categorías -->
+    <div id="nuestros-servicios-tabs">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="categoria1-tab" data-bs-toggle="tab" data-bs-target="#categoria1"
+                type="button" role="tab" aria-controls="categoria1" aria-selected="true">Categoría 1</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="categoria2-tab" data-bs-toggle="tab" data-bs-target="#categoria2"
+                type="button" role="tab" aria-controls="categoria2" aria-selected="false">Categoría 2</button>
+        </li>
+        <!-- Agrega más pestañas de categorías según sea necesario -->
+    </ul>
+    </div>
+    <!-- Contenido de las pestañas -->
+    <div class="tab-content" id="myTabContent">
+        <!-- Contenido de la pestaña de categoría 1 -->
+        <div class="tab-pane fade show active" id="categoria1" role="tabpanel" aria-labelledby="categoria1-tab">
+            <div class="row">
+                <!-- Lista de servicios de la categoría -->
+                <div class="col-md-4">
+                    <ul class="list-group" id="categoria1Servicios">
+                        <li class="list-group-item servicio">Servicio 1.1</li>
+                        <li class="list-group-item servicio">Servicio 1.2</li>
+                        <!-- Agrega más servicios de la categoría 1 según sea necesario -->
+                    </ul>
+                </div>
+                <!-- Descripción y requisitos del servicio seleccionado -->
+                
+                <div class="col-md-4">
+                    <div id="categoria1Descripcion"></div>
+                </div>
+                <div class="col-md-4">
+                    <div id="categoria1Requisitos"></div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Contenido de la pestaña de categoría 2 -->
+        <div class="tab-pane fade" id="categoria2" role="tabpanel" aria-labelledby="categoria2-tab">
+            <div class="row">
+                <!-- Lista de servicios de la categoría -->
+                <div class="col-md-4">
+                    <ul class="list-group" id="categoria2Servicios">
+                        <li class="list-group-item servicio">Servicio 2.1</li>
+                        <li class="list-group-item servicio">Servicio 2.2</li>
+                        <!-- Agrega más servicios de la categoría 2 según sea necesario -->
+                    </ul>
+                </div>
+                <!-- Descripción y requisitos del servicio seleccionado -->
+                <div class="col-md-4">
+                    <div id="categoria2Descripcion"></div>
+                </div>
+                <div class="col-md-4">
+                    <div id="categoria2Requisitos"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Agrega más contenido de pestañas según sea necesario -->
+    </div>
+    <!-- Botón "Adelante" -->
+    <div class="text-center mt-4">
+        <button type="button" class="btn btn-primary">Adelante!</button>
+    </div>
+</div>
+
+<!--script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Agrega un evento de clic a cada elemento de servicio en la categoría 1
+        var categoria1Servicios = document.querySelectorAll("#categoria1Servicios .servicio");
+        categoria1Servicios.forEach(function (servicio) {
+            servicio.addEventListener("click", function () {
+                // Actualiza la descripción y los requisitos en la categoría 1
+                document.getElementById("categoria1Descripcion").innerHTML = "Descripción para " + servicio.innerText;
+                document.getElementById("categoria1Requisitos").innerHTML = "requisitos para " + servicio.innerText;
+            });
+        });
+
+        // Agrega un evento de clic a cada elemento de servicio en la categoría 2
+        var categoria2Servicios = document.querySelectorAll("#categoria2Servicios .servicio");
+        categoria2Servicios.forEach(function (servicio) {
+            servicio.addEventListener("click", function () {
+                // Actualiza la descripción y los requisitos en la categoría 2
+                document.getElementById("categoria2Descripcion").innerHTML = "Descripción para " + servicio.innerText;
+                document.getElementById("categoria2Requisitos").innerHTML = "requisitos para " + servicio.innerText;
+            });
+        });
+    });
+</script-->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Obtener todas las pestañas de categorías
+    var tabs = document.querySelectorAll('#nuestros-servicios-tabs .nav-link');
+
+    tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            // Obtener el ID de la categoría asociada a esta pestaña
+            var categoriaId = tab.getAttribute('data-bs-target').substring(1);
+
+            // Obtener la lista de servicios, descripción y requisitos de esta categoría
+            var servicios = document.querySelectorAll('#' + categoriaId + 'Servicios .servicio');
+            var descripcion = document.getElementById(categoriaId + 'Descripcion');
+            var requisitos = document.getElementById(categoriaId + 'Requisitos');
+
+            // Agregar un evento de clic a cada servicio en esta categoría
+            servicios.forEach(function(servicio) {
+                servicio.addEventListener('click', function() {
+                    // Actualizar la descripción y los requisitos para esta categoría
+                    descripcion.innerHTML = "Descripción para " + servicio.innerText;
+                    requisitos.innerHTML = "Requisitos para " + servicio.innerText;
+                });
+            });
+        });
+    });
+});
+</script>
+
+<!-- Estoy buscando-->
 <div class="container"> 
     <div class="row justify-content-between align-items-center">
         <div class="col-md-8">
@@ -109,7 +231,7 @@
             <a href="https://www.sat.gob.pe/Websitev9" class="btn btn-outline-primary btn-lg btn-block">SAT</a>
         </div>
         <div class="col-md-3 mb-3">
-            <a href="pagina3.html" class="btn btn-outline-primary btn-lg btn-block">Botón 3</a>
+            <a href="pagina3.html" class="btn btn-outline-primary btn-lg btn-block">INTERES 3</a>
         </div>
         <div class="col-md-3 mb-3">
             <a href="pagina4.html" class="btn btn-outline-primary btn-lg btn-block">Botón 4</a>
