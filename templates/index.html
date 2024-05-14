@@ -51,7 +51,7 @@
     <div class="row">
         <div class="col">
             <!-- Imagen -->
-            <img src="/imagenes/inicio.jpeg" class="img-fluid" alt="Mi Imagen">
+            <img src="./imagenes/inicio.jpeg" class="img-fluid" alt="Mi Imagen">
         </div>
     </div>
 </div>
@@ -82,8 +82,8 @@
                 <!-- Lista de servicios de la categoría -->
                 <div class="col-md-4">
                     <ul class="list-group" id="categoria1Servicios">
-                        <li class="list-group-item servicio">Servicio 1.1</li>
-                        <li class="list-group-item servicio">Servicio 1.2</li>
+                        <li id="servicio1_1" class="list-group-item servicio">Servicio 1.1</li>
+                        <li id="servicio1_2" class="list-group-item servicio">Servicio 1.2</li>
                         <!-- Agrega más servicios de la categoría 1 según sea necesario -->
                     </ul>
                 </div>
@@ -104,8 +104,8 @@
                 <!-- Lista de servicios de la categoría -->
                 <div class="col-md-4">
                     <ul class="list-group" id="categoria2Servicios">
-                        <li class="list-group-item servicio">Servicio 2.1</li>
-                        <li class="list-group-item servicio">Servicio 2.2</li>
+                        <li id="servicio2_1" class="list-group-item servicio">Servicio 2.1</li>
+                        <li id="servicio2_2" class="list-group-item servicio">Servicio 2.2</li>
                         <!-- Agrega más servicios de la categoría 2 según sea necesario -->
                     </ul>
                 </div>
@@ -125,32 +125,33 @@
         <button type="button" class="btn btn-primary">Adelante!</button>
     </div>
 </div>
+<script >
+var serviciosData = {
+    categoria1: 
+    {servicio1_1:{
+        descripcion: "Compra y venta de bien inmueble ",
+        requisitos: "DNI"
+    },
+    servicio1_2:{ 
+        descripcion: "Donación",
+        requisitos: "COPIA dni"
+    }
+    },
+    categoria2: 
+    {servicio2_1:{
+        descripcion: "Carta poder ",
+        requisitos: "recibo de luz"
+    },
+    servicio2_2:{ 
+        descripcion: "compra de domicilio",
+        requisitos: "compra de domdfdsfsdfsdicilio"
+    }
+    },
+};
 
-<!--script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Agrega un evento de clic a cada elemento de servicio en la categoría 1
-        var categoria1Servicios = document.querySelectorAll("#categoria1Servicios .servicio");
-        categoria1Servicios.forEach(function (servicio) {
-            servicio.addEventListener("click", function () {
-                // Actualiza la descripción y los requisitos en la categoría 1
-                document.getElementById("categoria1Descripcion").innerHTML = "Descripción para " + servicio.innerText;
-                document.getElementById("categoria1Requisitos").innerHTML = "requisitos para " + servicio.innerText;
-            });
-        });
+    document.querySelector('#categoria1-tab').click()
+    document.querySelector('#servicio1_1').click()
 
-        // Agrega un evento de clic a cada elemento de servicio en la categoría 2
-        var categoria2Servicios = document.querySelectorAll("#categoria2Servicios .servicio");
-        categoria2Servicios.forEach(function (servicio) {
-            servicio.addEventListener("click", function () {
-                // Actualiza la descripción y los requisitos en la categoría 2
-                document.getElementById("categoria2Descripcion").innerHTML = "Descripción para " + servicio.innerText;
-                document.getElementById("categoria2Requisitos").innerHTML = "requisitos para " + servicio.innerText;
-            });
-        });
-    });
-</script-->
-
-<script>
     document.addEventListener("DOMContentLoaded", function () {
     // Obtener todas las pestañas de categorías
     var tabs = document.querySelectorAll('#nuestros-servicios-tabs .nav-link');
@@ -159,19 +160,32 @@
         tab.addEventListener('click', function() {
             // Obtener el ID de la categoría asociada a esta pestaña
             var categoriaId = tab.getAttribute('data-bs-target').substring(1);
-
+            console.log(categoriaId);
             // Obtener la lista de servicios, descripción y requisitos de esta categoría
             var servicios = document.querySelectorAll('#' + categoriaId + 'Servicios .servicio');
-            var descripcion = document.getElementById(categoriaId + 'Descripcion');
-            var requisitos = document.getElementById(categoriaId + 'Requisitos');
-
             // Agregar un evento de clic a cada servicio en esta categoría
             servicios.forEach(function(servicio) {
                 servicio.addEventListener('click', function() {
+                    //obtener el ID del servicio en esta categoría
+                    var servicioId = servicio.id;
+                    //var servicioId = servicio.getAttribute('id');
+                    console.log(servicioId);
+                    // Obtener la lista de descripción y requisitos de esta categoría
+                    var descripcion = serviciosData[categoriaId][servicioId].descripcion;
+                    //var descripcion = document.getElementById(categoriaId + 'Descripcion');
+                    var requisitos = serviciosData[categoriaId][servicioId].requisitos;
+                    //var requisitos = document.getElementById(categoriaId + 'Requisitos');
+                    console.log(descripcion, requisitos);
+
                     // Actualizar la descripción y los requisitos para esta categoría
-                    descripcion.innerHTML = "Descripción para " + servicio.innerText;
-                    requisitos.innerHTML = "Requisitos para " + servicio.innerText;
+                    var descripcion_mostrar = document.getElementById(categoriaId + 'Descripcion');
+                    var requisitos_mostrar = document.getElementById(categoriaId + 'Requisitos');
+                    console.log('despues',descripcion, requisitos);
+
+                    descripcion_mostrar.innerHTML = descripcion;
+                    requisitos_mostrar.innerHTML = requisitos;
                 });
+                
             });
         });
     });
@@ -221,34 +235,34 @@
 </div>
 
 <!-- Puntos de interes-->
-
+<!-- target="_blank" para q los links se abran en otra pestaña-->
 <div class="container">
     <div class="row">
         <div class="col-md-3 mb-3">
-            <a href="https://www.sunat.gob.pe/" class="btn btn-outline-primary btn-lg btn-block">Sunat</a>
+            <a href="https://www.sunat.gob.pe/" target="_blank" class="btn btn-outline-primary btn-lg btn-block">Sunat</a>
         </div>
         <div class="col-md-3 mb-3">
-            <a href="https://www.sat.gob.pe/Websitev9" class="btn btn-outline-primary btn-lg btn-block">SAT</a>
+            <a href="https://www.sat.gob.pe/Websitev9" target="_blank" class="btn btn-outline-primary btn-lg btn-block">SAT</a>
         </div>
         <div class="col-md-3 mb-3">
-            <a href="pagina3.html" class="btn btn-outline-primary btn-lg btn-block">INTERES 3</a>
+            <a href="pagina3.html" target="_blank" class="btn btn-outline-primary btn-lg btn-block">INTERES 3</a>
         </div>
         <div class="col-md-3 mb-3">
-            <a href="pagina4.html" class="btn btn-outline-primary btn-lg btn-block">Botón 4</a>
+            <a href="pagina4.html" target="_blank" class="btn btn-outline-primary btn-lg btn-block">Botón 4</a>
         </div>
     </div>
     <div class="row">
         <div class="col-md-3 mb-3">
-            <a href="pagina5.html" class="btn btn-outline-primary btn-lg btn-block">Botón 5</a>
+            <a href="pagina5.html" target="_blank" class="btn btn-outline-primary btn-lg btn-block">Botón 5</a>
         </div>
         <div class="col-md-3 mb-3">
-            <a href="pagina6.html" class="btn btn-outline-primary btn-lg btn-block">Botón 6</a>
+            <a href="pagina6.html" target="_blank" class="btn btn-outline-primary btn-lg btn-block">Botón 6</a>
         </div>
         <div class="col-md-3 mb-3">
-            <a href="pagina7.html" class="btn btn-outline-primary btn-lg btn-block">Botón 7</a>
+            <a href="pagina7.html" target="_blank" class="btn btn-outline-primary btn-lg btn-block">Botón 7</a>
         </div>
         <div class="col-md-3 mb-3">
-            <a href="pagina8.html" class="btn btn-outline-primary btn-lg btn-block">Botón 8</a>
+            <a href="pagina8.html" target="_blank" class="btn btn-outline-primary btn-lg btn-block">Botón 8</a>
         </div>
     </div>
 </div>
@@ -276,7 +290,7 @@
         </div>
         <div class="col-md-6">
             <!-- Imagen de ubicación -->
-            <img src="C:/Users/Eduardo/Desktop/projectos_python/web_tuccio/imagenes/mapanotaria.jpg" class="img-fluid" alt="Ubicación de la empresa">
+            <img src="./imagenes/mapanotaria.jpg">
         </div>
     </div>
 </div>
