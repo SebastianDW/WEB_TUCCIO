@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUCCIO servicios</title>
+    <link rel="stylesheet" href="/styles/servicios.css">
+</head>
+
+<body>
+    <section id="presentacion">
+        <section id="presentacion_distribucion">
+            <div id="presentacion_barra"></div>
+            <div id="presentacion_info">
+                <h1>SOMOS NOTARÍA TUCCIO</h1>
+                <p>servicios y trámites notariales</p>
+            </div>
+        </section>
+    </section>
+
+
+    <div class="servicio_contenedor">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#inicio">opcion1</a>
+                    <div id="inicio" class="submenu">
+                        <ul>
+                            <li><a id="opcion11" onclick="obtener_id(event);">Submenú 1.1</a></li>
+                            <li><a id="opcion12" onclick="obtener_id(event);">Submenú 1.2</a></li>
+                            <li><a id="opcion13" onclick="obtener_id(event);">Submenú 1.3</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#productos">opcion2</a>
+                    <div id="productos" class="submenu">
+                        <ul>
+                            <li><a id="opcion21" onclick="obtener_id(event);">Submenú 2.1</a></li>
+                            <li><a id="opcion22" onclick="obtener_id(event);">Submenú 2.2</a></li>
+                            <li><a id="opcion23" onclick="obtener_id(event);">Submenú 2.3</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#servicios">opcion3</a>
+                    <div id="servicios" class="submenu">
+                        <ul>
+                            <li><a href="#">Submenú 3.1</a></li>
+                            <li><a href="#">Submenú 3.2</a></li>
+                            <li><a href="#">Submenú 3.3</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#contacto">opcion4</a>
+                    <div id="contacto" class="submenu">
+                        <ul>
+                            <li><a href="#">Submenú 4.1</a></li>
+                            <li><a href="#">Submenú 4.2</a></li>
+                            <li><a href="#">Submenú 4.3</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div id="servicio_informacion">
+            <h2>Información del Servicio</h2>
+            <p id="contenedor_informacion"></p>
+        </div>
+    </div>
+
+    <script src="/scripts/servicios.js"></script>
+</body>
+
+</html>
