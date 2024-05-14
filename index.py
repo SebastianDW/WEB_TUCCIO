@@ -5,7 +5,8 @@ app = Flask(__name__)#verfiica que está en el archivo main
 
 @app.route('/')
 def principal():
-    return render_template('index.html')
+    #return render_template('index.html')
+    render_template('base.html')
 
 @app.route('/form_popup')
 def principal_form_popup():
