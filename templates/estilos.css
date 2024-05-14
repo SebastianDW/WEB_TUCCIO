@@ -3,3 +3,187 @@
         padding: 20px; /* Espaciado interno más grande */
         text-align: center; /* Texto centrado */
 }
+
+.seccion-intro{
+        position: relative; 
+        margin-top: 50px;
+        margin-bottom: 20px;
+        padding: 50px;
+
+        /*
+        margin-top: 50px;
+        margin-bottom: 20px;
+        background-image: url('/imagenes/fondo_intro.jpg'); 
+        background-size: cover; 
+        background-position: center; 
+        padding: 50px;
+        opacity: 0.6;*/
+}
+
+.seccion-intro::before {
+        content: ""; /* Pseudo-elemento para superponer */
+        position: absolute; /* Establecer posición absoluta */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/imagenes/fondo_intro.jpg'); /* Ruta de tu imagen de fondo */
+        background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
+        background-position: center; /* Centra la imagen en el contenedor */
+        opacity: 0.6; /* Ajusta la opacidad según sea necesario */
+        z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+    }
+
+
+.seccion-intro-titulo{
+        font-size: 24px;
+        color: #1d04ac;
+}
+
+.titulo-nuestros-servicios{
+        font-size: 48px;
+        font-weight: bold;
+        color: blue;
+}
+
+.seccion-nuestros-servicios{
+        margin-top: 20px;
+        margin-bottom: 40px;
+}
+
+.boton-adelante{
+        margin-top: 20px;
+        margin-bottom: 40px;  
+}
+
+.imagen-mapa {
+        width: 600px; /* Ancho deseado */
+        height: 600px; /* Altura ajustada automáticamente para mantener la proporción original */
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 10px solid rgb(37, 35, 35);
+        border-radius: 20px;
+}
+
+.titulo-contacto {
+        color: #1d04ac; /* Color del texto */
+        font-size: 36px; /* Tamaño del título */
+        margin-bottom: 20px; /* Espacio inferior */
+}
+    
+.datos-empresa {
+        list-style-type: none; /* Quita los puntos de la lista */
+        padding-left: 0; /* Quita el padding izquierdo de la lista */
+        margin-top: 85px;
+        margin-bottom: 20px;
+        font-size: 24px;
+        margin-left: 5px;
+}
+    
+.datos-empresa li {
+        margin-bottom: 5px; /* Espacio entre cada elemento de la lista */
+        font-size: 18px;
+}
+
+.icono {
+        font-size: 24px;
+        color: black;
+        margin-right: 35px;
+        size: 60px;
+        background-color: blue; /* Color de fondo del círculo */
+        border-radius: 50%; /* Bordado redondeado para hacer un círculo */
+        width: 30px; /* Ancho del contenedor del icono */
+        height: 30px; /* Altura del contenedor del icono */
+        display: flex; /* Flexbox para centrar el icono verticalmente */
+        justify-content: center; /* Centrar el icono horizontalmente */
+        align-items: center; /* Centrar el icono verticalmente */
+}
+
+.seccion-ubicacion{
+        background-image: url('/imagenes/fondo_ubicacion.jpg'); /* Ruta de tu imagen de fondo */
+        background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
+        background-position: center; /* Centra la imagen en el contenedor */
+        padding: 50px; /* Ajusta el relleno según sea necesario */
+}
+
+.seccion-preg-frec{
+        background-image: url('/imagenes/fondo_preg_frec.jpg'); /* Ruta de tu imagen de fondo */
+        background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
+        background-position: center; /* Centra la imagen en el contenedor */
+        padding: 50px; /* Ajusta el relleno según sea necesario */
+}
+
+.titulo-preg-frec{
+        color:rgb(34, 96, 138); /* Color del texto */
+        font-size: 36px; /* Tamaño del título */
+        margin-bottom: 20px; /* Espacio inferior */
+}
+.accordion-item {
+        background-color: #ffffff; /* Color de fondo para los desplegables */
+        
+}
+.accordion-button {
+        background-color: #ffffff; /* Color de fondo para el botón del desplegable */
+        color: #000000; /* Color del texto del botón */
+    }
+
+.accordion-button:hover {
+        background-color: #f0f0f0; /* Color de fondo cuando se pasa el mouse sobre el botón */
+    }
+
+.accordion-button:not(.collapsed) {
+        background-color: #f0f0f0; /* Color de fondo cuando el desplegable está abierto */
+    }
+
+.list-group-item {
+        background-color: #f8f9fa; /* Color de fondo para los elementos de la lista dentro del desplegable */
+    }
+
+.contenedor-barra-nav{
+        position: relative; 
+        margin-top: 50px;
+        margin-bottom: 20px;
+        padding: 50px;
+}
+
+
+.contenedor-barra-nav::before{
+        content: ""; /* Pseudo-elemento para superponer */
+        position: absolute; /* Establecer posición absoluta */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/imagenes/inicio.jpeg'); /* Ruta de tu imagen de fondo */
+        background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
+        background-position: center; /* Centra la imagen en el contenedor */
+        opacity: 0.6; /* Ajusta la opacidad según sea necesario */
+        z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+    
+}
+
+.titulo-nav{
+        color: white;
+        font-size: 50px;
+}
+
+.texto-nav{
+        color: white;
+        font-size: 24px; 
+}
+
+.texto-nav-desple{
+        color: rgb(18, 136, 67);
+        font-size: 16px;     
+}
+
+.barra_nav{
+        background-color: transparent !important; /* Fondo transparente */
+        border: none; /* Sin borde */
+}
+
+.texto-nav-contactanos{
+        color: white;
+        font-size: 24px;
+}
