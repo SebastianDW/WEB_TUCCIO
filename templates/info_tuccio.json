@@ -1,0 +1,36 @@
+{
+    "opcion1": {
+        "submenu1": {
+            "descripcion": "lorem ipsum descripcion 1.1",
+            "Requisitos": "lorem ipsum Requisitos 1.1",
+            "pasos": "lorem ipsum pasos 1.1"
+        },
+        "submenu2": {
+            "descripcion": "lorem ipsum descripcion 1.2",
+            "Requisitos": "lorem ipsum Requisitos 1.2",
+            "pasos": "lorem ipsum pasos 1.2"
+        },
+        "submenu3": {
+            "descripcion": "lorem ipsum descripcion 1.3",
+            "Requisitos": "lorem ipsum Requisitos 1.3",
+            "pasos": "lorem ipsum pasos 1.3"
+        }
+    },
+    "opcion2": {
+        "submenu1": {
+            "descripcion": "lorem ipsum descripcion 2.1",
+            "Requisitos": "lorem ipsum Requisitos 2.1",
+            "pasos": "lorem ipsum pasos 2.1"
+        },
+        "submenu2": {
+            "descripcion": "lorem ipsum descripcion 2.2",
+            "Requisitos": "lorem ipsum Requisitos 2.2",
+            "pasos": "lorem ipsum pasos 2.2"
+        },
+        "submenu3": {
+            "descripcion": "lorem ipsum descripcion 2.3",
+            "Requisitos": "lorem ipsum Requisitos 2.3",
+            "pasos": "lorem ipsum pasos 2.3"
+        }
+    }
+}
