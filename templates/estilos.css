@@ -187,3 +187,14 @@
         color: white;
         font-size: 24px;
 }
+
+.texto-buscando{
+        color: white;
+        font-size: 24px;
+        font-weight: bold;   
+}
+
+.barra-buscando{
+        margin-top: 50px;
+        margin-bottom: 20px; 
+}
