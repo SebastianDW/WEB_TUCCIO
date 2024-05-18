@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.chat-container {
+    width: 300px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    display: none;
+    flex-direction: column;
+}
+
+/*header de chat*/
+#chat_encabezado {
+    width: 100%;
+    height: 45px;
+    background: #160e58;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chat_encabezado P {
+    margin: 0;
+    color: white;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chat_encabezado button {
+    background: #160e58;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.chat-box {
+    height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.message {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+.message.bot {
+    background: #ececec;
+    align-self: flex-start;
+}
+
+.message.user {
+    background: #160e58;
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.options {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+button.option {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    background: #160e58;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#abrir_chat {
+    background: #160e58;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 10px -2px black;
+    cursor: pointer;
+    transition: 0.5s ease;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
+
+#abrir_chat:hover {
+    transform: scale(1.1);
+}
+
+#fuente_boton {
+    font-size: 40px;
+}

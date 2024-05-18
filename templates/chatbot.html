@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot de Opción Múltiple</title>
+    <link rel="stylesheet" href="styles/chatbox.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <div id="contenedor_chat" class="chat-container">
+        <div id="chat_encabezado">
+            <p><span class="material-symbols-outlined">
+                    contact_support
+                </span>NOTARIA TUCCIO</p>
+            <button onclick="cerrar_chat();"><span class="material-symbols-outlined">
+                    arrow_drop_down
+                </span></button>
+
+        </div>
+        <div class="chat-box" id="chat-box">
+
+        </div>
+        <div class="options" id="options">
+        </div>
+    </div>
+
+    <button id="abrir_chat" onclick="abrir_chat();">
+        <span id="fuente_boton" class="material-symbols-outlined">
+            contact_support
+        </span>
+    </button>
+
+    <script src="scripts/chatbot.js"></script>
+</body>
+
+</html>
